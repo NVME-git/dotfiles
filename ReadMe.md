@@ -7,38 +7,49 @@ by Nabeel Vandayar
 - Download the repository and save it at `~/dotfiles`
 - Remove the `.git` folder so you can add your own version control.
 
-## Install programs
-- stow 
-- tldr 
-- bat 
-- eza 
-- fzf 
-- zsh 
-- git 
-- gh 
-- tmux 
-- ripgrep
+## Create symlinks
+- Install [stow](https://www.gnu.org/software/stow/)
 
-For Ubuntu:
+For Ubuntu
 ```bash
-sudo apt install stow tldr bat eza fzf zsh git gh tmux ripgrep
+sudo apt install stow
 ```
-## Stow repo
+- stow the repo 
 ```bash
 cd ~/dotfiles
 stow .
 ```
 
+## Install other programs
+- [tldr](https://github.com/tldr-pages/tldr)
+- [bat](https://github.com/sharkdp/bat) 
+- [eza](https://github.com/eza-community/eza) 
+- [fzf](https://github.com/junegunn/fzf)
+- [zsh](https://github.com/zsh-users/zsh)
+- [git](https://github.com/git/git)
+- [gh](https://github.com/cli/cli#installation) 
+- [tmux](https://github.com/tmux/tmux) 
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+
+For Ubuntu:
+```bash
+sudo apt install tldr bat eza fzf zsh git gh tmux ripgrep
+```
+- [neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-package)
+
+
+
 ## Install plugins
 
-- [oh-my-zsh] (https://github.com/ohmyzsh/ohmyzsh)
+- [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
     - Allow oh-my-zsh to set zsh as the default shell.
-- [zsh-completions] (https://github.com/zsh-users/zsh-completions)
-- [zsh-autosuggestions] (https://github.com/zsh-users/zsh-autosuggestions)
-- [zsh-syntax-highlighting] (https://github.com/zsh-users/zsh-syntax-highlighting)
-- [powerlevel10k] (https://github.com/romkatv/powerlevel10k)
+- [zsh-completions](https://github.com/zsh-users/zsh-completions)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- [tmux plugin manager](https://github.com/tmux-plugins/tpm)
 
-### tmux TPM?????
+### tmux
 ```bash
 tmux
 ```
