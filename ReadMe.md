@@ -36,19 +36,22 @@ For Ubuntu:
 sudo apt install tldr bat eza fzf zsh git gh tmux ripgrep -y
 ```
 - [neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md#appimage-universal-linux-package)
+    - quit lazyvim by pressing `q`
+    - quit vim by entering <kbd>Esc</kbd>  <kbd>:q</kbd>
 
 
 
 ## Install plugins
 
-- [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
-    - Allow oh-my-zsh to set zsh as the default shell.
-    - Replace the `.zshrc` file oh-my-zsh creates with the original file `.zshrc.pre-oh-my-zsh`.
+- [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
+    - Set the following environment variable to prevent oh-my-zsh from moving the `.zshrc` file to `.zshrc.pre-oh-my-zsh`.
       ```bash
-      rm ~/.zshrc
-      mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
+      KEEP_ZSHRC=yes
       ```
-For each plugin below, ignore instructions to update the `.zshrc` as these have been made already.
+    - Install oh-my-zsh as described [here](https://github.com/ohmyzsh/ohmyzsh#basic-installation).
+    - Allow oh-my-zsh to set zsh as the default shell.
+
+For each plugin below, ignore instructions to update the `.zshrc` and `.tmux.conf` as these have been made already.
 - [zsh-completions](https://github.com/zsh-users/zsh-completions?tab=readme-ov-file#oh-my-zsh)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
