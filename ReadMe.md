@@ -33,9 +33,9 @@ stow .
 
 For Ubuntu:
 ```bash
-sudo apt install tldr bat eza fzf zsh git gh tmux ripgrep
+sudo apt install tldr bat eza fzf zsh git gh tmux ripgrep -y
 ```
-- [neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-package)
+- [neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md#appimage-universal-linux-package)
 
 
 
@@ -43,17 +43,17 @@ sudo apt install tldr bat eza fzf zsh git gh tmux ripgrep
 
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
     - Allow oh-my-zsh to set zsh as the default shell.
-- [zsh-completions](https://github.com/zsh-users/zsh-completions)
-- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-- [tmux plugin manager](https://github.com/tmux-plugins/tpm)
-
-### tmux
-```bash
-tmux
-```
-<kbd>Ctrl</kbd> + <kbd>S</kbd> + <kbd>I</kbd>
+    - Replace the `.zshrc` file oh-my-zsh creates with the original file `.zshrc.pre-oh-my-zsh`.
+      ```bash
+      rm ~/.zshrc
+      mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
+      ```
+For each plugin below, ignore instructions to update the `.zshrc` as these have been made already.
+- [zsh-completions](https://github.com/zsh-users/zsh-completions?tab=readme-ov-file#oh-my-zsh)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
+- [powerlevel10k](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh)
+- [tmux plugin manager](https://github.com/tmux-plugins/tpm?tab=readme-ov-file#installation)
 
 ## Configuration
 
@@ -68,6 +68,13 @@ Source the ZSH configuration file:
 ```
 source ~/.zshrc
 ```
+
+### tmux
+
+```bash
+tmux
+```
+<kbd>Ctrl</kbd> + <kbd>S</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>
 
 ### Github credentials
 
