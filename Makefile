@@ -1,21 +1,20 @@
 .PHONY: all setup install_dependencies clone_nvim setup_zsh_plugins
 
-all: setup install_dependencies clone_nvim setup_zsh_plugins
+install: stow programs nvim 
 
-install: install_dependencies clone_nvim setup_zsh_plugins
+configure: oh_my_zsh
 
-setup:
-        @echo "Cloning dotfiles repository..."
-        git clone https://github.com/NVME-git/dotfiles.git
+stow:
+        @echo "Stow repository..."
         sudo apt install -y stow
         cd ~/dotfiles && stow .
         cd ~
 
-install_dependencies:
-        @echo "Installing system dependencies..."
+programs:
+        @echo "Installing system programs..."
         sudo apt install -y tldr bat eza fzf zsh git gh tmux ripgrep
 
-clone_nvim:
+nvim:
         @echo "Downloading and installing Neovim..."
         curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
         chmod u+x nvim.appimage
@@ -24,8 +23,13 @@ clone_nvim:
         sudo mv squashfs-root /
         sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 
-setup_zsh_plugins:
-        @echo "Setting up Zsh plugins..."
+oh_my_zsh:
+        @echo "Setting up oh-my-zsh..."
+        export KEEP_ZSHRC="yes"
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+plugins:
+        @echo "Setting up plugins..."
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
         git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
         git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
