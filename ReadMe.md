@@ -44,11 +44,6 @@ sudo apt install tldr bat eza fzf zsh git gh tmux ripgrep -y
 ## Install plugins
 
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
-    - Set the following environment variable to prevent oh-my-zsh from moving the `.zshrc` file to `.zshrc.pre-oh-my-zsh`.
-      ```bash
-      KEEP_ZSHRC=yes
-      ```
-    - Install oh-my-zsh as described [here](https://github.com/ohmyzsh/ohmyzsh#basic-installation).
     - Allow oh-my-zsh to set zsh as the default shell.
 
 For each plugin below, ignore instructions to update the `.zshrc` and `.tmux.conf` as these have been made already.
