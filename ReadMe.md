@@ -51,6 +51,7 @@ For each plugin below, ignore instructions to update the `.zshrc` and `.tmux.con
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh)
+- [zoxide](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation)
 - [tmux plugin manager](https://github.com/tmux-plugins/tpm?tab=readme-ov-file#installation)
 
 ## Configuration
