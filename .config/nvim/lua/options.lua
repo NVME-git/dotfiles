@@ -19,3 +19,4 @@ vim.opt.splitbelow = true
 vim.opt.iskeyword:append("-")
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.showmode = false
+vim.opt.showcmd = true

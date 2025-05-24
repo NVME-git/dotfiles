@@ -53,9 +53,9 @@ ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -85,7 +85,6 @@ plugins=(
     zsh-syntax-highlighting)
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -144,7 +143,7 @@ if command -v fzf &> /dev/null; then
     local command=$1
     shift
     case "$command" in
-        cd) fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+	cd) fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
 	export|unset) fzf --preview "eval 'echo \$' {}" "$@" ;;
 	ssh) fzf --preview 'dig {}' "$@" ;;
 	*) fzf --preview "--preview 'batcat -n --color=always --line-range :500 {}'" "$@" ;;
@@ -153,8 +152,8 @@ if command -v fzf &> /dev/null; then
 fi
 
 # Zoxide
+eval "$(zoxide init zsh)"
 if command -v z &> /dev/null; then
-    eval "$(zoxide init zsh)"
     alias cd="z"
 fi
 
